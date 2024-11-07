@@ -6,8 +6,9 @@ chatAPP<br>
 │  └─── Repositories　//FireBaseとのやりとりを担当<br>
 ├── Domain<br>
 │  └──Entities　//モデル<br>
+├── DI　//Dependencies<br>
 ├── previewContent <br>
-│  ├─── DI //Dependencies<br>
+│  ├─── DI //DependenciesPreview用<br>
 │  └─── Data //Mock<br>
 その他 <br>
 <br>
