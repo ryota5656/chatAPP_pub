@@ -1,17 +1,22 @@
 import FirebaseFirestore
+import Dependencies
 
 class ChatViewModel: ObservableObject {
+    let chatId: String
+    let title: String
     @Published var chats: [Chat] = []
     @Published var userImageURLs: [String: String] = [:]
     
-    private let chatRepository: ChatRepositoryProtocol
-    private let userRepository: UserRepositoryProtocol
-    
-    init(chatRepository: ChatRepositoryProtocol,
-         userRepository: UserRepositoryProtocol) {
-        self.chatRepository = chatRepository
-        self.userRepository = userRepository
+    init(chatId: String, title: String) {
+        self.chatId = chatId
+        self.title = title
     }
+    
+//    private let chatRepository: ChatRepositoryProtocol
+//    private let userRepository: UserRepositoryProtocol
+    
+    @Dependency(\.chatRepository) private var chatRepository
+    @Dependency(\.userRepository) private var userRepository
     
     @MainActor
     func fetchChats(chatId: String) async {

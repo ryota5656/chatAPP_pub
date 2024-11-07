@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ResetPasswordView: View {
+struct ResetPasswordScreen: View {
     @State private var email: String = ""
     @ObservedObject var viewModel: AuthViewModel
 

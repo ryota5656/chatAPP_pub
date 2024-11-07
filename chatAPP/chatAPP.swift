@@ -19,13 +19,21 @@ struct ChatApp: App {
     var body: some Scene {
         WindowGroup {
             // ログイン状態によって画面遷移するページを変更する
-            if viewModel.isAuthenticated {
-                ChatListScreen(authVm: viewModel)
-            } else {
-                SignInView(viewModel: viewModel)
-            }
+            ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
 
+struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthViewModel
+    
+    var body: some View {
+        if authViewModel.isAuthenticated {
+            ChatListScreen()
+        } else {
+            SignInScreen()
+        }
+    }
+}
 

@@ -1,9 +1,11 @@
 import SwiftUI
+import Dependencies
 
-struct SignInView: View {
+struct SignInScreen: View {
     @State private var email: String = ""
     @State private var password: String = ""
-    @ObservedObject var viewModel: AuthViewModel
+    
+    @Dependency(\.authViewModel) var viewModel
 
     var body: some View {
         NavigationView {
@@ -22,19 +24,19 @@ struct SignInView: View {
                     }
                 }
                 .padding(.top, 16)
-
-                if viewModel.isAuthenticated {
-                    // ログイン後のページに遷移
-                    ChatListScreen(authVm: viewModel)
+                .onTapGesture {
+                    if viewModel.isAuthenticated {
+                        // ログイン後のページに遷移
+                        ChatListScreen()
+                    }
                 }
-
                 // 新規登録画面への遷移ボタン
-                NavigationLink(destination: SignUpView(viewModel: viewModel)) {
+                NavigationLink(destination: SignUpScreen(viewModel: viewModel)) {
                     Text("Create Account")
                         .padding(.top, 16)
                 }
                 // パスワードのリセットページへ移動する
-                NavigationLink(destination: ResetPasswordView(viewModel: viewModel)) {
+                NavigationLink(destination: ResetPasswordScreen(viewModel: viewModel)) {
                     Text("Password Reset")
                         .padding(.top, 16)
                 }
@@ -43,12 +45,3 @@ struct SignInView: View {
     }
 }
 
-#Preview("Authenticated State") {
-    SignInView(viewModel: MockAuthViewModel())
-        .previewLayout(.sizeThatFits)
-}
-// プレビュー用のAuthViewModel
-class MockAuthViewModel: AuthViewModel {
-    @Published var isAuthenticated2 = false
-    @Published var userID2: String?
-}

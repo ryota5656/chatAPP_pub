@@ -11,6 +11,7 @@ struct ChatListRow: View {
         HStack {
             let images = "user01"
             
+            // いつかimageを複数横並びに表示させる
             HStack(spacing: -28) {
                 Image(images)
                     .resizable()
@@ -47,4 +48,8 @@ struct ChatListRow: View {
         }
         return ""
     }
+}
+
+#Preview {
+    ChatListRow(chatList: ChatList(id: "1", title: "title", lastChat: "lastChat", lastDate: Date(), userIds: []))
 }

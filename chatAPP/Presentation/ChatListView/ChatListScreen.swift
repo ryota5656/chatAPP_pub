@@ -1,31 +1,19 @@
 import SwiftUI
+import Dependencies
 
 struct ChatListScreen: View {
-    @ObservedObject var authVm: AuthViewModel
-    @StateObject var chatListVm: ChatListViewModel
-    @StateObject var userVm: UserViewModel
-    
-    init(authVm: AuthViewModel) {
-        self.authVm = authVm
-        let userRepository = UserRepository()
-        let chatListRepository = ChatListRepository()
-        _userVm = StateObject(wrappedValue: UserViewModel(userRepository: userRepository))
-        _chatListVm = StateObject(wrappedValue: ChatListViewModel(chatListRepository: chatListRepository))
-    }
+    @EnvironmentObject var authVm: AuthViewModel
+    @StateObject var chatListVm = ChatListViewModel()
+    @StateObject var userVm = UserViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 header
-                
                 Divider()
-                
                 profileSection
-                
                 Divider()
-                
                 Text("Chat List")
-                
                 list
             }
             .padding(.horizontal)
@@ -54,7 +42,10 @@ extension ChatListScreen {
                         Image(systemName: "plus.square.fill")
                             .accentColor(.black)
                     }
-                    .sheet(isPresented: $chatListVm.showingNewChatListPopup) {
+                    .sheet(isPresented: Binding<Bool>(
+                        get: { chatListVm.showingNewChatListPopup },
+                        set: { chatListVm.showingNewChatListPopup = $0 }
+                    )) {
                         NewChatListPopup(viewModel: chatListVm) {
                             Task {
                                 await chatListVm.saveChatList(chatListTitle: chatListVm.chatListName)
@@ -68,7 +59,7 @@ extension ChatListScreen {
                 
                 VStack() {
                     Button(action: {
-                        authVm.signOut()
+                        signOut()
                     }) {
                         Image(systemName: "house.fill")
                             .accentColor(.black)
@@ -92,22 +83,20 @@ extension ChatListScreen {
             }
             .padding(.vertical, 8)
             
-            if chatListVm.isProfileExpanded {
-                ProfileSettingForm(authVm: authVm, chatListVm: chatListVm, userVm: userVm)
-            }
+            ProfileSettingForm(authVm: authVm, chatListVm: chatListVm, userVm: userVm)
+                .visible(chatListVm.isProfileExpanded)
         }
     }
     
     private var list: some View {
         List {
             ForEach(chatListVm.chatList) { chat in
-                NavigationLink(destination: ChatView(chatId: chat.id ?? "",title: chat.title, viewModel: authVm, chatRepository: ChatRepository(), userRepository: UserRepository())) {
+                NavigationLink(destination: ChatScreen(chatVm: ChatViewModel(chatId: chat.id ?? "", title: chat.title))) {
                     ChatListRow(chatList: chat)
                 }
                 .frame(height: 80)
                 .listRowInsets(EdgeInsets())
             }
-            
             .onDelete(perform: remove)
         }
         .listStyle(PlainListStyle())
@@ -118,7 +107,7 @@ extension ChatListScreen {
         offsets.forEach { index in
             guard let id = chatListVm.chatList[index].id else { return }
             Task {
-                await chatListVm.deleteDocument(documentId: id)
+                await chatListVm.deleteChatList(documentId: id)
             }
         }
     }
@@ -134,8 +123,16 @@ extension ChatListScreen {
             await userVm.startListeningForUserChanges(userId: authVm.getCurrentUserID())
         }
     }
+    
+    private func signOut() {
+        Task {
+            await authVm.signOut()
+        }
+    }
 }
+
 #Preview {
-    ChatListScreen(authVm: AuthViewModel())
+    ChatListScreen()
+        .environmentObject(AuthViewModel())
 }
 

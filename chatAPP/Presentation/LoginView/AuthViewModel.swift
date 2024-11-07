@@ -1,22 +1,21 @@
 import SwiftUI
 import FirebaseAuth
+import Dependencies
 
-@MainActor
 class AuthViewModel: ObservableObject {
     @Published var isAuthenticated = false
     @Published var userID: String?
     @Published var userName: String?
     @Published var userUrl: URL?
     
-    private let authRepository: AuthRepositoryProtocol
-    
-    init(authRepository: AuthRepositoryProtocol = AuthRepository()) {
-        self.authRepository = authRepository
-        observeAuthChanges()
+    @Dependency(\.authRepository) private var authRepository
+        
+    init() {
+        startObservingAuthChanges()
     }
     
-    private func observeAuthChanges() {
-        Task {
+    private func startObservingAuthChanges() {
+        Task { @MainActor in
             for await user in authRepository.observeAuthChanges() {
                 isAuthenticated = user != nil
             }
@@ -51,12 +50,15 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func signOut() {
+    @MainActor
+    func signOut() async {
         do {
-            try authRepository.signOut()
+            try await authRepository.signOut()
             isAuthenticated = false
         } catch {
             print("Error signing out: \(error)")
         }
     }
 }
+
+

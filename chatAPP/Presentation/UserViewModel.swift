@@ -1,15 +1,12 @@
 import FirebaseFirestore
+import Dependencies
 
 class UserViewModel: ObservableObject {
     @Published var currentUser: User?
     @Published var textFieldText: String = ""
     @Published var imageFieldText: String = ""
-    private let userRepository: UserRepositoryProtocol
     
-    
-    init(userRepository: UserRepositoryProtocol) {
-        self.userRepository = userRepository
-    }
+    @Dependency(\.userRepository) private var userRepository
     
     // userProfileで表示するため現在のユーザーを取得するメソッド
     @MainActor

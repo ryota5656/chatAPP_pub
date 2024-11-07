@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct ChatRow: View {
-    
     let currentUserId: String
     let chat: Chat
     @Binding var userImageURL: String?

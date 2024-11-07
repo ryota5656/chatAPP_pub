@@ -6,7 +6,7 @@ protocol AuthRepositoryProtocol {
     func signIn(email: String, password: String) async throws
     func signUp(email: String, password: String) async throws
     func resetPassword(email: String) async throws
-    func signOut() throws
+    func signOut() async throws
 }
 
 class AuthRepository: AuthRepositoryProtocol {
@@ -38,7 +38,7 @@ class AuthRepository: AuthRepositoryProtocol {
         try await Auth.auth().sendPasswordReset(withEmail: email)
     }
     
-    func signOut() throws {
-        try Auth.auth().signOut()
+    func signOut() async throws {
+        try await Auth.auth().signOut()
     }
 }

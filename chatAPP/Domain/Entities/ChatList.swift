@@ -8,3 +8,13 @@ struct ChatList: Decodable, Identifiable, Equatable {
     let lastDate: Date?
     let userIds: [String]?
 }
+
+class co {
+    static let chatList = "chatList"
+}
+
+enum DataState {
+    case loading
+    case success
+    case failure(Error)
+}

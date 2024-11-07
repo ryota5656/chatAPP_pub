@@ -25,10 +25,18 @@
 		A3CE8EFC2C6B23720091DA8F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8EF72C6B23720091DA8F /* UserViewModel.swift */; };
 		A3CE8F042C6B237A0091DA8F /* ChatListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8EFD2C6B237A0091DA8F /* ChatListScreen.swift */; };
 		A3CE8F052C6B237A0091DA8F /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8EFE2C6B237A0091DA8F /* ChatRow.swift */; };
-		A3CE8F062C6B237A0091DA8F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8EFF2C6B237A0091DA8F /* ChatView.swift */; };
-		A3CE8F072C6B237A0091DA8F /* ResetPassWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8F002C6B237A0091DA8F /* ResetPassWordView.swift */; };
-		A3CE8F082C6B237A0091DA8F /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8F012C6B237A0091DA8F /* SignInView.swift */; };
-		A3CE8F092C6B237A0091DA8F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8F022C6B237A0091DA8F /* SignUpView.swift */; };
+		A3CE8F062C6B237A0091DA8F /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8EFF2C6B237A0091DA8F /* ChatScreen.swift */; };
+		A3CE8F072C6B237A0091DA8F /* ResetPassWordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8F002C6B237A0091DA8F /* ResetPassWordScreen.swift */; };
+		A3CE8F082C6B237A0091DA8F /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8F012C6B237A0091DA8F /* SignInScreen.swift */; };
+		A3CE8F092C6B237A0091DA8F /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CE8F022C6B237A0091DA8F /* SignUpScreen.swift */; };
+		A3D7DDE22CA84A2D0052F888 /* ChatRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7DDDE2CA84A2C0052F888 /* ChatRepositoryMock.swift */; };
+		A3D7DDE32CA84A2D0052F888 /* ChatListRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7DDDF2CA84A2D0052F888 /* ChatListRepositoryMock.swift */; };
+		A3D7DDE42CA84A2D0052F888 /* AuthRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7DDE02CA84A2D0052F888 /* AuthRepositoryMock.swift */; };
+		A3D7DDE52CA84A2D0052F888 /* UserRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7DDE12CA84A2D0052F888 /* UserRepositoryMock.swift */; };
+		A3D7DDE72CA84A390052F888 /* MockDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7DDE62CA84A390052F888 /* MockDependencies.swift */; };
+		A3DC7D062CA12F3D00220099 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC7D052CA12F3D00220099 /* ViewExtensions.swift */; };
+		A3DC7D082CA1B9BB00220099 /* InputArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC7D072CA1B9BB00220099 /* InputArea.swift */; };
+		A3DC7D0A2CA1BF3200220099 /* NavigationArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC7D092CA1BF3200220099 /* NavigationArea.swift */; };
 		A3FB90AE2C7635EE0039B57E /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB90AD2C7635ED0039B57E /* ChatRepository.swift */; };
 		A3FB90B72C77760E0039B57E /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB90B62C77760E0039B57E /* UserRepository.swift */; };
 		A3FB90F02C79BDD80039B57E /* ChatListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB90EF2C79BDD80039B57E /* ChatListRepository.swift */; };
@@ -36,6 +44,11 @@
 		A3FB90F52C7B20F70039B57E /* NewChatListPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB90F42C7B20F70039B57E /* NewChatListPopupView.swift */; };
 		A3FB90F82C7B264C0039B57E /* ProfileSettingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB90F72C7B264C0039B57E /* ProfileSettingForm.swift */; };
 		A3FB90FA2C7B30F70039B57E /* ChatListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB90F92C7B30F70039B57E /* ChatListRow.swift */; };
+		A3FB91E62C82F32D0039B57E /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = A3FB91E52C82F32D0039B57E /* Dependencies */; };
+		A3FB91E82C82F32D0039B57E /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = A3FB91E72C82F32D0039B57E /* DependenciesMacros */; };
+		A3FB91EA2C8301EC0039B57E /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = A3FB91E92C8301EC0039B57E /* Dependencies */; };
+		A3FB91EC2C8301EC0039B57E /* DependenciesMacros in Frameworks */ = {isa = PBXBuildFile; productRef = A3FB91EB2C8301EC0039B57E /* DependenciesMacros */; };
+		A3FB91EF2C841A210039B57E /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FB91EE2C841A210039B57E /* Dependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +87,18 @@
 		A3CE8EF72C6B23720091DA8F /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		A3CE8EFD2C6B237A0091DA8F /* ChatListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListScreen.swift; sourceTree = "<group>"; };
 		A3CE8EFE2C6B237A0091DA8F /* ChatRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
-		A3CE8EFF2C6B237A0091DA8F /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		A3CE8F002C6B237A0091DA8F /* ResetPassWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPassWordView.swift; sourceTree = "<group>"; };
-		A3CE8F012C6B237A0091DA8F /* SignInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		A3CE8F022C6B237A0091DA8F /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A3CE8EFF2C6B237A0091DA8F /* ChatScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		A3CE8F002C6B237A0091DA8F /* ResetPassWordScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPassWordScreen.swift; sourceTree = "<group>"; };
+		A3CE8F012C6B237A0091DA8F /* SignInScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		A3CE8F022C6B237A0091DA8F /* SignUpScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		A3D7DDDE2CA84A2C0052F888 /* ChatRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatRepositoryMock.swift; path = "chatAPP/Preview Content/Data/Repository/ChatRepositoryMock.swift"; sourceTree = SOURCE_ROOT; };
+		A3D7DDDF2CA84A2D0052F888 /* ChatListRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListRepositoryMock.swift; path = "chatAPP/Preview Content/Data/Repository/ChatListRepositoryMock.swift"; sourceTree = SOURCE_ROOT; };
+		A3D7DDE02CA84A2D0052F888 /* AuthRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthRepositoryMock.swift; path = "chatAPP/Preview Content/Data/Repository/AuthRepositoryMock.swift"; sourceTree = SOURCE_ROOT; };
+		A3D7DDE12CA84A2D0052F888 /* UserRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRepositoryMock.swift; path = "chatAPP/Preview Content/Data/Repository/UserRepositoryMock.swift"; sourceTree = SOURCE_ROOT; };
+		A3D7DDE62CA84A390052F888 /* MockDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockDependencies.swift; path = "chatAPP/Preview Content/DI/MockDependencies.swift"; sourceTree = SOURCE_ROOT; };
+		A3DC7D052CA12F3D00220099 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		A3DC7D072CA1B9BB00220099 /* InputArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputArea.swift; sourceTree = "<group>"; };
+		A3DC7D092CA1BF3200220099 /* NavigationArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationArea.swift; sourceTree = "<group>"; };
 		A3FB90AD2C7635ED0039B57E /* ChatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepository.swift; sourceTree = "<group>"; };
 		A3FB90B62C77760E0039B57E /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		A3FB90EF2C79BDD80039B57E /* ChatListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRepository.swift; sourceTree = "<group>"; };
@@ -85,6 +106,7 @@
 		A3FB90F42C7B20F70039B57E /* NewChatListPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatListPopupView.swift; sourceTree = "<group>"; };
 		A3FB90F72C7B264C0039B57E /* ProfileSettingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingForm.swift; sourceTree = "<group>"; };
 		A3FB90F92C7B30F70039B57E /* ChatListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRow.swift; sourceTree = "<group>"; };
+		A3FB91EE2C841A210039B57E /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +116,9 @@
 			files = (
 				A3CE8EE62C6B1F010091DA8F /* FirebaseAuth in Frameworks */,
 				A3CE8EE82C6B1F010091DA8F /* FirebaseFirestore in Frameworks */,
+				A3FB91E82C82F32D0039B57E /* DependenciesMacros in Frameworks */,
 				A3CE8EEA2C6B1F010091DA8F /* FirebaseStorage in Frameworks */,
+				A3FB91E62C82F32D0039B57E /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3FB91EC2C8301EC0039B57E /* DependenciesMacros in Frameworks */,
+				A3FB91EA2C8301EC0039B57E /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +170,7 @@
 				A3FB90AF2C763DBC0039B57E /* Presentation */,
 				A3FB90B12C763E230039B57E /* Data */,
 				A3FB90B02C763E110039B57E /* Domain */,
+				A3FB91ED2C8419F10039B57E /* DI */,
 				A3FB90B52C763F170039B57E /* Application */,
 				A3FB916D2C7B57130039B57E /* Preview Content */,
 			);
@@ -177,6 +204,41 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		A3DC7D042CA12F1C00220099 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC7D052CA12F3D00220099 /* ViewExtensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A3DC7D0D2CA8284100220099 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC7D0E2CA8284700220099 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A3DC7D0E2CA8284700220099 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A3D7DDE02CA84A2D0052F888 /* AuthRepositoryMock.swift */,
+				A3D7DDDF2CA84A2D0052F888 /* ChatListRepositoryMock.swift */,
+				A3D7DDDE2CA84A2C0052F888 /* ChatRepositoryMock.swift */,
+				A3D7DDE12CA84A2D0052F888 /* UserRepositoryMock.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A3DC7D172CA829A100220099 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A3D7DDE62CA84A390052F888 /* MockDependencies.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		A3FB90AC2C7635B00039B57E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +253,7 @@
 		A3FB90AF2C763DBC0039B57E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A3DC7D042CA12F1C00220099 /* Common */,
 				A3CE8EF72C6B23720091DA8F /* UserViewModel.swift */,
 				A3FB90B22C763E5C0039B57E /* ChatListView */,
 				A3FB90B32C763E720039B57E /* ChatView */,
@@ -229,8 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				A3FB90F32C7B20100039B57E /* Compornents */,
+				A3CE8EFF2C6B237A0091DA8F /* ChatScreen.swift */,
 				A3CE8EF62C6B23720091DA8F /* ChatViewModel.swift */,
-				A3CE8EFF2C6B237A0091DA8F /* ChatView.swift */,
 			);
 			path = ChatView;
 			sourceTree = "<group>";
@@ -238,9 +301,9 @@
 		A3FB90B42C763E9C0039B57E /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
-				A3CE8F002C6B237A0091DA8F /* ResetPassWordView.swift */,
-				A3CE8F012C6B237A0091DA8F /* SignInView.swift */,
-				A3CE8F022C6B237A0091DA8F /* SignUpView.swift */,
+				A3CE8F002C6B237A0091DA8F /* ResetPassWordScreen.swift */,
+				A3CE8F012C6B237A0091DA8F /* SignInScreen.swift */,
+				A3CE8F022C6B237A0091DA8F /* SignUpScreen.swift */,
 				A3CE8EF42C6B23720091DA8F /* AuthViewModel.swift */,
 			);
 			path = LoginView;
@@ -258,6 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				A3CE8EFE2C6B237A0091DA8F /* ChatRow.swift */,
+				A3DC7D072CA1B9BB00220099 /* InputArea.swift */,
+				A3DC7D092CA1BF3200220099 /* NavigationArea.swift */,
 			);
 			path = Compornents;
 			sourceTree = "<group>";
@@ -275,6 +340,8 @@
 		A3FB916D2C7B57130039B57E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				A3DC7D172CA829A100220099 /* DI */,
+				A3DC7D0D2CA8284100220099 /* Data */,
 			);
 			name = "Preview Content";
 			path = "../../chatAPP_connect/chatAPP_connect/Preview Content";
@@ -285,6 +352,14 @@
 			children = (
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A3FB91ED2C8419F10039B57E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				A3FB91EE2C841A210039B57E /* Dependencies.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +382,8 @@
 				A3CE8EE52C6B1F010091DA8F /* FirebaseAuth */,
 				A3CE8EE72C6B1F010091DA8F /* FirebaseFirestore */,
 				A3CE8EE92C6B1F010091DA8F /* FirebaseStorage */,
+				A3FB91E52C82F32D0039B57E /* Dependencies */,
+				A3FB91E72C82F32D0039B57E /* DependenciesMacros */,
 			);
 			productName = chatAPP;
 			productReference = A3CE8EB72C6B185A0091DA8F /* chatAPP.app */;
@@ -326,6 +403,10 @@
 				A3CE8EC92C6B185F0091DA8F /* PBXTargetDependency */,
 			);
 			name = chatAPPTests;
+			packageProductDependencies = (
+				A3FB91E92C8301EC0039B57E /* Dependencies */,
+				A3FB91EB2C8301EC0039B57E /* DependenciesMacros */,
+			);
 			productName = chatAPPTests;
 			productReference = A3CE8EC72C6B185F0091DA8F /* chatAPPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -382,6 +463,7 @@
 			mainGroup = A3CE8EAE2C6B185A0091DA8F;
 			packageReferences = (
 				A3CE8EE42C6B1F010091DA8F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A3FB91E42C82F32C0039B57E /* XCRemoteSwiftPackageReference "swift-dependencies" */,
 			);
 			productRefGroup = A3CE8EB82C6B185A0091DA8F /* Products */;
 			projectDirPath = "";
@@ -428,24 +510,33 @@
 				A3CE8EFA2C6B23720091DA8F /* ChatListViewModel.swift in Sources */,
 				A3CE8EFC2C6B23720091DA8F /* UserViewModel.swift in Sources */,
 				A3CE8EFB2C6B23720091DA8F /* ChatViewModel.swift in Sources */,
+				A3D7DDE42CA84A2D0052F888 /* AuthRepositoryMock.swift in Sources */,
 				A3CE8EF92C6B23720091DA8F /* AuthViewModel.swift in Sources */,
 				A3FB90AE2C7635EE0039B57E /* ChatRepository.swift in Sources */,
-				A3CE8F062C6B237A0091DA8F /* ChatView.swift in Sources */,
+				A3CE8F062C6B237A0091DA8F /* ChatScreen.swift in Sources */,
+				A3D7DDE32CA84A2D0052F888 /* ChatListRepositoryMock.swift in Sources */,
+				A3FB91EF2C841A210039B57E /* Dependencies.swift in Sources */,
 				A3FB90F82C7B264C0039B57E /* ProfileSettingForm.swift in Sources */,
 				A3FB90F02C79BDD80039B57E /* ChatListRepository.swift in Sources */,
+				A3D7DDE22CA84A2D0052F888 /* ChatRepositoryMock.swift in Sources */,
 				A3CE8F042C6B237A0091DA8F /* ChatListScreen.swift in Sources */,
 				A3FB90FA2C7B30F70039B57E /* ChatListRow.swift in Sources */,
+				A3DC7D082CA1B9BB00220099 /* InputArea.swift in Sources */,
 				A3CE8EF12C6B23580091DA8F /* User.swift in Sources */,
 				A3CE8EBB2C6B185A0091DA8F /* chatAPP.swift in Sources */,
 				A3CE8EF02C6B23580091DA8F /* ChatList.swift in Sources */,
 				A3CE8F052C6B237A0091DA8F /* ChatRow.swift in Sources */,
-				A3CE8F092C6B237A0091DA8F /* SignUpView.swift in Sources */,
+				A3DC7D0A2CA1BF3200220099 /* NavigationArea.swift in Sources */,
+				A3CE8F092C6B237A0091DA8F /* SignUpScreen.swift in Sources */,
+				A3DC7D062CA12F3D00220099 /* ViewExtensions.swift in Sources */,
 				A3CE8EEF2C6B23580091DA8F /* Chat.swift in Sources */,
-				A3CE8F072C6B237A0091DA8F /* ResetPassWordView.swift in Sources */,
+				A3CE8F072C6B237A0091DA8F /* ResetPassWordScreen.swift in Sources */,
+				A3D7DDE72CA84A390052F888 /* MockDependencies.swift in Sources */,
 				A3FB90F52C7B20F70039B57E /* NewChatListPopupView.swift in Sources */,
 				A3FB90F22C7B03D90039B57E /* AuthRepository.swift in Sources */,
+				A3D7DDE52CA84A2D0052F888 /* UserRepositoryMock.swift in Sources */,
 				A3FB90B72C77760E0039B57E /* UserRepository.swift in Sources */,
-				A3CE8F082C6B237A0091DA8F /* SignInView.swift in Sources */,
+				A3CE8F082C6B237A0091DA8F /* SignInScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"chatAPP/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "../chatAPP_connect/chatAPP_connect/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -637,7 +728,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"chatAPP/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "../chatAPP_connect/chatAPP_connect/Preview\\ Content";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -781,6 +872,14 @@
 				minimumVersion = 11.0.0;
 			};
 		};
+		A3FB91E42C82F32C0039B57E /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -798,6 +897,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A3CE8EE42C6B1F010091DA8F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		A3FB91E52C82F32D0039B57E /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3FB91E42C82F32C0039B57E /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		A3FB91E72C82F32D0039B57E /* DependenciesMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3FB91E42C82F32C0039B57E /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = DependenciesMacros;
+		};
+		A3FB91E92C8301EC0039B57E /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3FB91E42C82F32C0039B57E /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+		A3FB91EB2C8301EC0039B57E /* DependenciesMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3FB91E42C82F32C0039B57E /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = DependenciesMacros;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

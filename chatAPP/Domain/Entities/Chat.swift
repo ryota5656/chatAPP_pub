@@ -1,6 +1,6 @@
 import Foundation
 
-struct Chat: Decodable, Identifiable, Equatable {
+struct Chat: Codable, Identifiable, Equatable {
     let id: String
     let userId: String
     let chatId: String

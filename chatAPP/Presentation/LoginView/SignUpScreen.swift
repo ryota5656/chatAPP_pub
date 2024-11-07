@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct SignUpView: View {
+struct SignUpScreen: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @ObservedObject var viewModel: AuthViewModel
@@ -20,12 +20,9 @@ struct SignUpView: View {
                     await viewModel.signUp(email: email, password: password)
                 }
             }
-
+            // ログイン後のページに遷移
             if viewModel.isAuthenticated {
-                // ログイン後のページに遷移
-                if viewModel.isAuthenticated {
-                    ChatListScreen(authVm: viewModel)
-                }
+                ChatListScreen()
             }
         }
     }

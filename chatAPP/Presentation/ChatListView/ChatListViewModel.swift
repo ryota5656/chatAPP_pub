@@ -1,23 +1,30 @@
 import FirebaseFirestore
 import Foundation
+import Dependencies
 
 class ChatListViewModel: ObservableObject {
     @Published var chatList: [ChatList] = []
     @Published var isProfileExpanded = false
     @Published var showingNewChatListPopup = false
     @Published var chatListName = ""
-    private let chatListRepository: ChatListRepositoryProtocol
     
-    init(chatListRepository: ChatListRepositoryProtocol) {
-        self.chatListRepository = chatListRepository
-    }
+    private var chatListState: DataState = .loading
+    
+    @Dependency(\.chatListRepository) private var chatListRepository
     
     // チャットリストを取得するメソッド
     // AsyncStreamでの対応
+    // chatListStateについては今回特に使用していませんがView側の出し分ける振る舞いに使えるようにしています
     @MainActor
     func fetchChatList() async {
-        for await chatList in chatListRepository.fetchChatList() {
-            self.chatList = chatList
+        do {
+            chatListState = .loading
+            for try await chatList in chatListRepository.fetchChatList() {
+                self.chatList = chatList
+            }
+            chatListState = .success
+        } catch {
+            chatListState = .failure(error)
         }
     }
     
@@ -35,9 +42,9 @@ class ChatListViewModel: ObservableObject {
     }
     
     // チャットリストを削除するメソッド
-    func deleteDocument(documentId: String) async {
+    func deleteChatList(documentId: String) async {
         do {
-            try await chatListRepository.deleteDocument(documentId: documentId)
+            try await chatListRepository.deleteChatList(documentId: documentId)
         } catch {
             print("Error delete chatList: \(error.localizedDescription)")
         }
@@ -55,3 +62,4 @@ class ChatListViewModel: ObservableObject {
         chatListName = ""
     }
 }
+

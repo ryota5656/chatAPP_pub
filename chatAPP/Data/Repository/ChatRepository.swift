@@ -49,16 +49,14 @@ class ChatRepository: ChatRepositoryProtocol {
         let docRef = db.collection("chat").document()
         let currentDate = Date()
         
-        let chat: [String: Any] = [
-            "id": docRef.documentID,
-            "chatId": chatId,
-            "text": text,
-            "userId": userId,
-            "date": currentDate,
-            "readed": false
-        ]
+        let chat = Chat(id: docRef.documentID,
+                        userId: userId,
+                        chatId: chatId,
+                        text: text,
+                        date: currentDate,
+                        readed: false)
         
-        try await docRef.setData(chat)
+        try  docRef.setData(from: chat)
         // チャットリスト画面の最新日時・最新投稿を更新するため記述してます
         try await updateChatList(chatId: chatId, lastChat: text, lastDate: currentDate)
     }
