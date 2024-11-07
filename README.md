@@ -1,3 +1,17 @@
+基本構成
+chatAPP
+├── ChatApp.swift<br>
+├── Presentation //VおよびVMを管理<br>
+├── Data<br>
+│  └─── Repositories　//FireBaseとのやりとりを担当<br>
+├── Domain<br>
+│  └──Entities　//モデル<br>
+├── previewContent <br>
+│  ├─── DI //Dependencies<br>
+│  └─── Data //Mock<br>
+その他 <br>
+<br>
+<br>
 【追加した機能】<br>
 ログイン機能を含めたチャット機能の作成<br>
 <br>
